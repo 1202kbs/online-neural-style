@@ -1,0 +1,39 @@
+{% extends 'convert/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Download Image{% endblock %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/download_style.css' %}">{% endblock %}
+
+{% block headerURL %}{% url 'gallery:user' %}{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:logout_user' %}">Log Out</a></li>
+
+{% endblock %}
+
+{% block body%}
+
+    <div class="row">
+        <div class="col-md-3">
+            <h1 style="text-align: center; font-size: 40px; color: white;">Download</h1>
+        </div>
+    </div>
+
+    <div class="create">
+        <div class="container">
+            <div class="head">
+                <h3 style="padding: 5px;">Download Image</h3>
+            </div>
+
+            <div class="body">
+                {% with 'convert/output/'|add:session.output_image_title as image_static %}
+                    <img src= {% static image_static %}>
+                {% endwith %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

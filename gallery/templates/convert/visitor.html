@@ -1,0 +1,88 @@
+{% extends 'convert/base.html' %}
+{%  load staticfiles %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/visitor_style.css' %}">{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:login_user' %}">Log In</a></li>
+
+    <!--
+    <li><a data-toggle="modal" data-target="#LogIn">Log In</a></li>
+
+    <div class="modal fade" id="LogIn">
+        <div class="modal-dialog" style="background-color: white; border-radius: 5px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Login</h3>
+            </div>
+
+
+            <div class="modal-body">
+                <form role="form" action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+    </div>
+    -->
+
+{% endblock%}
+
+{% block body %}
+
+    <div class="insert">
+
+        <div class="main">
+            <h1>Neural Style</h1>
+            <h2>An Online Implementation of <i>A Neural Algorithm of Artistic Style</i></h2>
+            <a class="btn" data-toggle="modal" data-target="#SignUp">Sign Up & Get Started</a>
+        </div>
+
+        <div class="suppl">
+            <ul class="images">
+                <li class="img"><img src="{% static 'convert/images/starrynight.png' %}" alt="Starry Night by Gogh"/></li>
+                <li class="img"><img src="{% static 'convert/images/golden_gate.png' %}" alt="Golden Gate Bridge Original"/></li>
+                <li class="img"><img src="{% static 'convert/images/golden_gate_starry.png' %}" alt="Golden Gate Bridge Gogh Style"/></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="SignUp">
+        <div class="modal-dialog" style="background-color: white; border-radius: 5px; width: 210px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title" style="text-align: center;">Sign Up</h3>
+            </div>
+
+            <!-- Link to View -->
+            <div class="modal-body">
+                <form role="form" action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% include 'convert/form_template.html' %}
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Link Modal Footer button with Modal Body Form
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-block">Submit</button>
+            </div>
+            -->
+        </div>
+    </div>
+
+{% endblock %}

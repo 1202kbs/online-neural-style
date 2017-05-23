@@ -1,0 +1,52 @@
+{% extends 'convert/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Create Image{% endblock %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/image_filter_create_style.css' %}">{% endblock %}
+
+{% block headerURL %}{% url 'gallery:user' %}{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:logout_user' %}">Log Out</a></li>
+
+{% endblock %}
+
+{% block body%}
+
+    <div class="row">
+        <div class="col-md-3">
+            <h1 style="text-align: center; font-size: 40px; color: white;">Add Filter</h1>
+        </div>
+    </div>
+
+    <div class="create">
+        <div class="container">
+            <h3 style="padding: 5px;">Add a New Image</h3>
+
+            <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% for field in form %}
+                    <div class="form-group">
+                        <div class="control-label col-sm-2">
+                            {{ field.label_tag }}
+                        </div>
+                        <div class="col-sm-10" style="position: relative; top: 4px;">
+                            {{ field }}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

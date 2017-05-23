@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    {% load staticfiles %}
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'convert/bootstrap.min.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'convert/login_style.css' %}">
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% block headerURL %}{% url 'gallery:visitor' %}{% endblock %}"><b><i>Neural Style</i></b></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login">
+        <div class="container">
+            <h3>Login</h3>
+            <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="id_username">
+                        Username:
+                    </label>
+                    <div class="col-sm-10">
+                        <input id="id_username" maxlength="30" name="username" type="text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="id_password">
+                        Password:
+                    </label>
+                    <div class="col-sm-10">
+                        <input id="id_password" maxlength="30" name="password" type="password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'convert/base.html' %}
+{%  load staticfiles %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/visitor_style.css' %}">{% endblock %}
+
+{% block headerURL %}{% url 'gallery:user' %}{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:logout_user' %}">Log Out</a></li>
+
+{% endblock%}
+
+{% block body %}
+
+    <div class="insert">
+
+        <div class="main">
+            <h1>Neural Style</h1>
+            <h2>An Online Implementation of <i>A Neural Algorithm of Artistic Style</i></h2>
+            <a class="btn" href="{% url 'gallery:filters' %}">Get Started</a>
+        </div>
+
+        <div class="suppl">
+            <ul class="images">
+                <li class="img"><img src="{% static 'convert/images/starrynight.png' %}" alt="Starry Night by Gogh"/></li>
+                <li class="img"><img src="{% static 'convert/images/golden_gate.png' %}" alt="Golden Gate Bridge Original"/></li>
+                <li class="img"><img src="{% static 'convert/images/golden_gate_starry.png' %}" alt="Golden Gate Bridge Gogh Style"/></li>
+            </ul>
+        </div>
+
+    </div>
+
+{% endblock %}

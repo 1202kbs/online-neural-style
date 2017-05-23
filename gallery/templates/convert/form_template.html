@@ -1,0 +1,19 @@
+{% for field in form %}
+
+    <!--
+    <div class="form-group">
+        <ul style="text-align: center;">
+            <li style="display: inline-block;"><label class="control-label">{{ field.label_tag }}</label></li>
+            <li style="display: inline-block;"><div class="col-md-10">{{ field }}</div></li>
+        </ul>
+    </div>
+    -->
+
+
+    <div class="form-group">
+        {{ field.label_tag }}
+        {{ field }}
+    </div>
+
+
+{% endfor %}

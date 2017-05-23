@@ -1,0 +1,103 @@
+{% extends 'convert/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Filters{% endblock %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/images_filters_style.css' %}">{% endblock %}
+
+{% block headerURL %}{% url 'gallery:user' %}{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:logout_user' %}">Log Out</a></li>
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-3">
+            <h1>Filters</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!--
+        <div class="col-md-3">
+            <div class="picture_container">
+                <div class="header">
+                    <form action="#" method="post">
+                        <button type="button" class="close">&times;</button>
+                    </form>
+                </div>
+
+                <div class="body" align="center">
+                    <div>
+                        <img src="{% static 'convert/images/starrynight.jpg' %}">
+                    </div>
+                    <div>
+                        <h3>Starry Night by Gogh</h3>
+                    </div>
+                    <div>
+                        <a class="btn" href="#">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+
+
+        {% if filters %}
+            {% for filter in filters %}
+
+                <div class="col-md-3">
+                    <div class="picture_container">
+                        <div class="header">
+                            <form action="{% url 'gallery:delete_filter' filter.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="filter_id" value="{{ filter.id }}" />
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    &times;
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="body" align="center">
+                            <div>
+                                <img src="{{ filter.filter_file.url }}">
+                            </div>
+                            <div>
+                                <h3>{{ filter.filter_title }} by {{ filter.artist }}</h3>
+                            </div>
+
+                            <p class="details">{{ filter.filter_description }}</p>
+
+                            <div class="detail_btn">Details</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        {% endif %}
+
+
+        <div class="col-md-3">
+            <div class="picture_container">
+
+                <div class="body" align="center">
+                    <div>
+                        <a class="btn" href="{% url 'gallery:create_filter' %}">Add New Filter</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src='{% static 'convert/js/main.js' %}'></script>
+
+{% endblock %}

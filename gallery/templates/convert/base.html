@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Neural Style{% endblock %}</title>
+    {% load staticfiles %}
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'convert/bootstrap.min.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% block optional_css %}{% endblock %}
+</head>
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <!-- Insert the appropriate URL the Main Logo should redirect to -->
+                <a class="navbar-brand" href="{% block headerURL %}{% url 'gallery:visitor' %}{% endblock %}"><b><i>Neural Style</i></b></a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li><a href="https://arxiv.org/abs/1508.06576" target="_blank">About</a></li>
+                <li><a href="{% url 'gallery:filters' %}">Filters</a></li>
+                <li><a href="{% url 'gallery:images' %}">Images</a></li>
+                <li><a href="{% url 'gallery:convert' %}">Convert</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{% url 'gallery:create_filter' %}">Add Filter</a></li>
+                <li><a href="{% url 'gallery:create_image' %}">Add Image</a></li>
+                {% block Log %}<li><a href="{% url 'gallery:login_user' %}">Log In</a></li>{% endblock %}
+            </ul>
+
+            <form class="navbar-form navbar-right" role="search" method="get" action="#">
+                <button type="submit" class="btn btn-default">Search</button>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="q" value="">
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    {% block body %}
+    {% endblock %}
+
+
+</body>
+</html>
