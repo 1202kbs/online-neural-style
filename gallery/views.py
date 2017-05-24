@@ -10,12 +10,19 @@ from . import neural_style as ns
 
 
 # The view returned for a user
-class IndexView(generic.ListView):
-    template_name = 'convert/user.html'
-    context_object_name = 'filters'
+# class IndexView(generic.ListView):
+#     template_name = 'convert/user.html'
+#     context_object_name = 'filters'
+#
+#     def get_queryset(self):
+#         return Filter.objects.all()
 
-    def get_queryset(self):
-        return Filter.objects.all()
+
+def userview(request):
+    if not request.user.is_authenticated():
+        return render(request, 'convert/login.html')
+    else:
+        return render(request, 'convert/user.html')
 
 
 def filters(request):
