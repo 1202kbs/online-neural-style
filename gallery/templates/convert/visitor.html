@@ -67,6 +67,7 @@
             </div>
 
             <!-- Link to View -->
+
             <div class="modal-body">
                 <form role="form" action="" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
@@ -77,6 +78,32 @@
                 </form>
             </div>
 
+
+            <!--
+            <div class="modal-body">
+                <form role="form">
+
+                    <div class="form-group">
+                        <input maxlength="30" name="username" type="text" placeholder="Username">
+                    </div>
+
+                    <div class="form-group">
+                        <input maxlength="30" name="email" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="form-group">
+                        <input maxlength="30" name="password" type="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+
+                </form>
+
+            </div>
+            -->
+
             <!-- Link Modal Footer button with Modal Body Form
             <div class="modal-footer">
                 <button class="btn btn-primary btn-block">Submit</button>
@@ -84,5 +111,6 @@
             -->
         </div>
     </div>
+
 
 {% endblock %}

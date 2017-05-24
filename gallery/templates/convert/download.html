@@ -21,8 +21,9 @@
         </div>
     </div>
 
-    <div class="create">
-        <div class="container">
+    <div class="row">
+
+        <div class="create">
 
             <div class="head">
                 <h3 style="padding: 5px;">{{ session.session_name }}</h3>
@@ -32,16 +33,15 @@
 
                 <div>
                     {% with 'convert/output/'|add:session.output_image_title as image_static %}
-                        <img src= {% static image_static %}>
+                        <img class="img-responsive" src= {% static image_static %}>
                     {% endwith %}
                 </div>
 
                 <div>
                     {% with 'convert/output/'|add:session.output_image_title as image_static %}
-                        <a class="btn btn-success" href={% static image_static %} download>Download</a>
+                        <a class="btn btn-success" id="download_btn" href={% static image_static %} download>Download</a>
                     {% endwith %}
                 </div>
-
 
             </div>
 
