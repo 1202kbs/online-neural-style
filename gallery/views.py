@@ -1,5 +1,6 @@
 from django.contrib.auth import authenticate, login, logout
 from django.views import generic
+from django.db.models import Q
 from django.views.generic import View
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Image, Filter, Session
@@ -21,7 +22,17 @@ def filters(request):
         return render(request, 'convert/login.html')
     else:
         filters = Filter.objects.filter(user=request.user)
-        return render(request, 'convert/filters.html', {'filters': filters})
+        query = request.GET.get('q')
+        if query:
+            filters = filters.filter(
+                Q(filter_title__icontains=query) |
+                Q(artist__icontains=query)
+            ).distinct()
+            return render(request, 'convert/filters.html', {'filters': filters})
+        else:
+            return render(request, 'convert/filters.html', {'filters': filters})
+
+        # return render(request, 'convert/filters.html', {'filters': filters})
 
 
 def images(request):
@@ -29,7 +40,14 @@ def images(request):
         return render(request, 'convert/login.html')
     else:
         images = Image.objects.filter(user=request.user)
-        return render(request, 'convert/images.html', {'images': images})
+        query = request.GET.get('q')
+        if query:
+            images = images.filter(
+                Q(image_title__icontains=query)
+            ).distinct()
+            return render(request, 'convert/images.html', {'images': images})
+        else:
+            return render(request, 'convert/images.html', {'images': images})
 
 
 def convert(request):

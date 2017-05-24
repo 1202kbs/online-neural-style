@@ -13,7 +13,7 @@ h1 {
     border-radius: 5px;
     width: 90%;
     padding: 10px;
-    margin: 10px auto;
+    margin: 10px;
 }
 
 .body {
@@ -75,4 +75,3 @@ h1 {
     background-color: #4f4f4f;
     color: white;
 }
-
