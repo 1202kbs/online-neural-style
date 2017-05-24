@@ -172,6 +172,7 @@ def main(options):
         if iteration is not None:
             if options.checkpoint_output:
                 output_file = options.checkpoint_output % iteration
+                # yield iteration
         else:
             output_file = options.output
         if output_file:
