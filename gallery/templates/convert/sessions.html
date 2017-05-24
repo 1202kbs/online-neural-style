@@ -75,13 +75,23 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-success" id="convert_button" onclick="myFunction()">Submit</button>
                     </div>
                 </div>
 
             </form>
         </div>
     </div>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            var el = document.getElementById("convert_button");
+            el.className = "btn btn-info";
+            el.text("Converting... (Please wait until conversion is finished)");
+        }
+
+    </script>
 
 
 

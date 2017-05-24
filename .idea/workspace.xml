@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6295c64f-814e-4b46-8c03-3a932b7c9ce3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gallery/Neural Style.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gallery/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gallery/requirements.txt" afterPath="" />
+    <list default="true" id="6295c64f-814e-4b46-8c03-3a932b7c9ce3" name="Default" comment="Add download link to download page">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/templates/convert/download.html" afterPath="$PROJECT_DIR$/gallery/templates/convert/download.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/views.py" afterPath="$PROJECT_DIR$/gallery/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/templates/convert/sessions.html" afterPath="$PROJECT_DIR$/gallery/templates/convert/sessions.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="download.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gallery/templates/convert/download.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="608">
+              <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gallery/templates/convert/sessions.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -110,16 +116,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="295">
               <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="neural_style.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gallery/neural_style.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3154">
-              <caret line="176" column="23" lean-forward="true" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -187,7 +183,6 @@
         <option value="$PROJECT_DIR$/gallery/templates/convert/filters.html" />
         <option value="$PROJECT_DIR$/gallery/static/convert/sessions_style.css" />
         <option value="$PROJECT_DIR$/gallery/urls.py" />
-        <option value="$PROJECT_DIR$/gallery/templates/convert/sessions.html" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/create_filter.html" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/create_image.html" />
         <option value="$PROJECT_DIR$/gallery/stylize.py" />
@@ -203,6 +198,7 @@
         <option value="$PROJECT_DIR$/gallery/static/convert/js/main.js" />
         <option value="$PROJECT_DIR$/gallery/views.py" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/download.html" />
+        <option value="$PROJECT_DIR$/gallery/templates/convert/sessions.html" />
       </list>
     </option>
   </component>
@@ -597,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495624798067</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add download link to download page">
+      <created>1495627164556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1495627164556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -611,10 +614,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38049304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -662,7 +666,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Enable Image/Filter Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enable Image/Filter Search" />
+    <MESSAGE value="Add download link to download page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add download link to download page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,16 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/sessions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" column="24" lean-forward="true" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="e#1058#1095#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,8 +1003,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gallery/templates/convert/download.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        <state relative-caret-position="608">
+          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/sessions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="68" column="40" lean-forward="true" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
           <folding />
         </state>
       </provider>
