@@ -23,14 +23,26 @@
 
     <div class="create">
         <div class="container">
+
             <div class="head">
-                <h3 style="padding: 5px;">Download Image</h3>
+                <h3 style="padding: 5px;">{{ session.session_name }}</h3>
             </div>
 
-            <div class="body">
-                {% with 'convert/output/'|add:session.output_image_title as image_static %}
-                    <img src= {% static image_static %}>
-                {% endwith %}
+            <div class="body" align="center">
+
+                <div>
+                    {% with 'convert/output/'|add:session.output_image_title as image_static %}
+                        <img src= {% static image_static %}>
+                    {% endwith %}
+                </div>
+
+                <div>
+                    {% with 'convert/output/'|add:session.output_image_title as image_static %}
+                        <a class="btn btn-success" href={% static image_static %} download>Download</a>
+                    {% endwith %}
+                </div>
+
+
             </div>
 
         </div>

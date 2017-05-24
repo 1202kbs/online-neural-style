@@ -1,8 +1,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.views import generic
+from django.http import HttpResponse
 from django.db.models import Q
 from django.views.generic import View
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from .models import Image, Filter, Session
 from .forms import UserForm, ImageForm, FilterForm, SessionForm
 from . import neural_style as ns
