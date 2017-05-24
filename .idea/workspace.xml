@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6295c64f-814e-4b46-8c03-3a932b7c9ce3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/1-style.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gallery/templates/convert/base.html" afterPath="$PROJECT_DIR$/gallery/templates/convert/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,14 +29,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gallery/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="361">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gallery/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gallery/templates/convert/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="26" column="72" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -117,7 +137,6 @@
         <option value="$PROJECT_DIR$/gallery/templates/convert/detail.html" />
         <option value="$PROJECT_DIR$/gallery/static/convert/images/images_style.css" />
         <option value="$PROJECT_DIR$/gallery/static/convert/images_style.css" />
-        <option value="$PROJECT_DIR$/gallery/templates/convert/base.html" />
         <option value="$PROJECT_DIR$/gallery/static/convert/login_style.css" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/user.html" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/detail_image.html" />
@@ -126,7 +145,6 @@
         <option value="$PROJECT_DIR$/gallery/admin.py" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/filters.html" />
         <option value="$PROJECT_DIR$/gallery/static/convert/sessions_style.css" />
-        <option value="$PROJECT_DIR$/gallery/urls.py" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/create_filter.html" />
         <option value="$PROJECT_DIR$/gallery/templates/convert/create_image.html" />
         <option value="$PROJECT_DIR$/gallery/stylize.py" />
@@ -143,6 +161,8 @@
         <option value="$PROJECT_DIR$/gallery/templates/convert/sessions.html" />
         <option value="$PROJECT_DIR$/gallery/neural_style.py" />
         <option value="$PROJECT_DIR$/gallery/views.py" />
+        <option value="$PROJECT_DIR$/gallery/urls.py" />
+        <option value="$PROJECT_DIR$/gallery/templates/convert/base.html" />
       </list>
     </option>
   </component>
@@ -558,7 +578,21 @@
       <option name="project" value="LOCAL" />
       <updated>1495633572234</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Delete unused media directory">
+      <created>1495633722166</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1495633722167</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Convert class-based IndexView to function-based userview">
+      <created>1495634191822</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1495634191822</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -626,7 +660,9 @@
     <MESSAGE value="Add download link to download page" />
     <MESSAGE value="Change convert button to display info after being clicked" />
     <MESSAGE value="Render visitor page with UserForm context after logging out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Render visitor page with UserForm context after logging out" />
+    <MESSAGE value="Delete unused media directory" />
+    <MESSAGE value="Convert class-based IndexView to function-based userview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert class-based IndexView to function-based userview" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -756,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="56" lean-forward="false" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/static/convert/login_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -797,14 +826,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gallery/LICENSE.txt" />
-    <entry file="file://$PROJECT_DIR$/gallery/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="94" lean-forward="false" selection-start-line="18" selection-start-column="94" selection-end-line="18" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/templates/convert/create_filter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -893,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/templates/convert/create_image.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -949,14 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gallery/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/templates/convert/visitor.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -965,13 +970,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="33" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gallery/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="361">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gallery/templates/convert/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="72" lean-forward="true" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
