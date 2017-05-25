@@ -10,7 +10,7 @@ from .stylize import stylize
 import math
 from argparse import ArgumentParser
 
-from PIL import Image
+from PIL import Image as PILImage
 
 # default arguments
 CONTENT_WEIGHT = 5e0
@@ -192,7 +192,7 @@ def imread(path):
 
 def imsave(path, img):
     img = np.clip(img, 0, 255).astype(np.uint8)
-    Image.fromarray(img).save(path, quality=95)
+    PILImage.fromarray(img).save(path, quality=95)
 
 if __name__ == '__main__':
     main()

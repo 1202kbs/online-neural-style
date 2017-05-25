@@ -17,6 +17,8 @@ urlpatterns = [
     url(r'^(?P<image_id>[0-9]+)/delete_image/$', views.delete_image, name='delete_image'),
     url(r'^create_filter/$', views.create_filter, name='create_filter'),
     url(r'^(?P<filter_id>[0-9]+)/delete_filter/$', views.delete_filter, name='delete_filter'),
+    url(r'^convert/(?P<session_id>[0-9]+)/progress/$', views.progress, name='progress'),
+    url(r'^convert/(?P<session_id>[0-9]+)/progress/update/$', views.update_progress, name='update'),
 ]
 
 if settings.DEBUG:

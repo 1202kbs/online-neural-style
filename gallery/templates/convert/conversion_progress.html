@@ -1,0 +1,61 @@
+{% extends 'convert/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Download Image{% endblock %}
+
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/download_style.css' %}">{% endblock %}
+
+{% block headerURL %}{% url 'gallery:user' %}{% endblock %}
+
+{% block Log %}
+
+    <li><a href="{% url 'gallery:logout_user' %}">Log Out</a></li>
+
+{% endblock %}
+
+{% block body%}
+
+    <div class="row">
+        <div class="col-md-3">
+            <h1 style="text-align: center; font-size: 40px; color: white;">Conversion In Progress...</h1>
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" id="pbar" role="progressbar" style="width: 0%;">
+            0%
+        </div>
+    </div>
+
+
+        <!-- <button type="submit" class="btn btn-default form-control" id="cvtbtn" name="q" value="1">Convert</button> -->
+        <a class="btn btn-default form-control" id="cvtbtn" href="{% url 'gallery:update' session.id %}">Convert</a>
+
+
+
+    <script>
+
+
+        $("#cvtbtn").on('click', function(e) {
+
+            e.preventDefault();
+
+            var url = $(this).attr('href');
+
+            $.getJSON(url)
+            .done(function (data) {
+                var curr_iter = data.curr_iter;
+                var maxm_iter = data.maxm_iter;
+
+                var width = Math.floor((curr_iter / maxm_iter) * 100);
+                width = width.toString();
+
+                $("#pbar").css("width", width + "%")
+            })
+        }
+
+
+
+    </script>
+
+{% endblock %}
