@@ -3,16 +3,19 @@ body {
 }
 
 .create {
-    width: 40%;
-    height: 70%;
+    width: 520px;
+    height: 604px;
     background: white;
     margin: auto;
     border-radius: 5px;
 }
 
 .body img {
-    width: 95%;
-    height: 95%;
+    display: block;
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
     border-radius: 5px;
 }
 

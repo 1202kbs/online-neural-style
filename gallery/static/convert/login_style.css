@@ -9,3 +9,7 @@ body {
     margin: auto;
     border-radius: 5px;
 }
+
+.login .container {
+    max-width: 1000px;
+}

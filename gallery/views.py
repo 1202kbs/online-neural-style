@@ -1,21 +1,10 @@
 from django.contrib.auth import authenticate, login, logout
-from django.views import generic
-from django.http import HttpResponse
 from django.db.models import Q
 from django.views.generic import View
 from django.shortcuts import render, redirect
 from .models import Image, Filter, Session
 from .forms import UserForm, ImageForm, FilterForm, SessionForm
 from . import neural_style as ns
-
-
-# The view returned for a user
-# class IndexView(generic.ListView):
-#     template_name = 'convert/user.html'
-#     context_object_name = 'filters'
-#
-#     def get_queryset(self):
-#         return Filter.objects.all()
 
 
 def userview(request):
@@ -39,8 +28,6 @@ def filters(request):
             return render(request, 'convert/filters.html', {'filters': filters})
         else:
             return render(request, 'convert/filters.html', {'filters': filters})
-
-        # return render(request, 'convert/filters.html', {'filters': filters})
 
 
 def images(request):
@@ -151,22 +138,6 @@ def create_filter(request):
         return render(request, 'convert/create_filter.html', context)
 
 
-# def create_session(request):
-#     if not request.user.is_authenticated():
-#         return render(request, 'convert/login.html')
-#     else:
-#         form = SessionForm(request.POST or None)
-#         if form.is_valid():
-#             image = form.save(commit=False)
-#             image.user = request.user
-#             image.save()
-#             return render(request, 'convert/detail_session.html', {'image': image})
-#         context = {
-#             'form': form,
-#         }
-#         return render(request, 'convert/create_session.html', context)
-
-
 def delete_filter(request, filter_id):
     filter = Filter.objects.get(pk=filter_id)
     filter.delete()
@@ -181,24 +152,14 @@ def delete_image(request, image_id):
     return render(request, 'convert/images.html', {'images': images})
 
 
-# def delete_session(request, filter_id, image_id, session_id):
-#     filter = get_object_or_404(Filter, pk=filter_id)
-#     image = get_object_or_404(Image, pk=image_id)
-#     session = Session.objects.get(pk=session_id)
-#     session.delete()
-#    return render(request, 'convert/sessions.html', {'filter': filter, 'image': image})
-
-
 class UserFormView(View):
     form_class = UserForm
     template_name = 'convert/visitor.html'
 
-    # Use this function when it is get request
     def get(self, request):
         form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
 
-    # Use this function when it is post request
     def post(self, request):
         form = self.form_class(request.POST)
 
@@ -216,7 +177,6 @@ class UserFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('gallery:user')
-                    # get user's info: request.user.username / etc.
 
         return render(request, self.template_name, {'form': form})
 
