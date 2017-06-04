@@ -1,9 +1,9 @@
 {% extends 'convert/base.html' %}
 {% load staticfiles %}
 
-{% block title %}Sessions{% endblock %}
+{% block title %}Images{% endblock %}
 
-{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/sessions_style.css' %}">{% endblock %}
+{% block optional_css %}<link rel="stylesheet" type="text/css" href="{% static 'convert/images_filters_style.css' %}">{% endblock %}
 
 {% block headerURL %}{% url 'gallery:user' %}{% endblock %}
 
@@ -17,48 +17,61 @@
 
     <div class="row">
         <div class="col-md-3">
-            <h1>Conversion</h1>
+            <h1>Images</h1>
         </div>
     </div>
 
-    <div class="create">
-        <div class="container" style="max-width: 1000px;">
-            <h3 style="padding: 5px;">Conversion Settings</h3>
+    <div class="row">
 
-            <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data" style="margin-left: 40px">
-                {% csrf_token %}
+        {% if images %}
+            {% for image in images %}
 
-                {% for field in form %}
-                    <div class="form-group">
-                        <div class="control-label col-sm-2">
-                            {{ field.label_tag }}
+                <div class="col-md-3">
+                    <div class="picture_container">
+                        <div class="header">
+                            <form action="{% url 'gallery:delete_image' image.id %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="filter_id" value="{{ image.id }}" />
+                                <button type="submit" class="btn btn-default btn-sm">
+                                    &times;
+                                </button>
+                            </form>
                         </div>
-                        <div class="col-sm-10" style="position: relative; top: 4px;">
-                            {{ field }}
-                        </div>
-                    </div>
-                {% endfor %}
 
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-success" id="convert_button" onclick="myFunction()">Submit</button>
+                        <div class="body" align="center">
+                            <div>
+                                <img src="{{ image.image_file.url }}">
+                            </div>
+                            <div>
+                                <h3>{{ image.image_title }}</h3>
+                            </div>
+
+                            <p class="details">{{ image.image_description }}</p>
+
+                            <div class="detail_btn">Details</div>
+
+                        </div>
                     </div>
                 </div>
 
-            </form>
+            {% endfor %}
+        {% endif %}
+
+        <div class="col-md-3">
+            <div class="picture_container">
+
+                <div class="body" align="center">
+                    <div>
+                        <a class="btn" href="{% url 'gallery:create_image' %}">Add New Image</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <script type="text/javascript">
 
-        function myFunction() {
-            var el = document.getElementById("convert_button");
-            el.className = "btn btn-info";
-            el.innerHTML = "Converting... (Please wait until conversion is finished)";
-        }
-
-    </script>
-
-
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src='{% static 'convert/js/main.js' %}'></script>
 
 {% endblock %}
